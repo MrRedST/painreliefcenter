@@ -1,0 +1,48 @@
+{
+  "brand": "Pain Relief Center",
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Pain Relief Center",
+    "subtitle": "Atención especializada en manejo del dolor y salud de la columna. Tratamientos personalizados para mejorar tu calidad de vida.",
+    "cta": "Solicitar una cita"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "text1": "En Pain Relief Center, nos dedicamos a brindar atención integral y compasiva a pacientes que sufren de dolor agudo y crónico.",
+    "text2": "Nuestro equipo de especialistas utiliza las técnicas y tecnología más avanzadas para ayudarte a recuperar tu bienestar y movilidad."
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "service1": {
+      "title": "Manejo Intervencionista del Dolor",
+      "desc": "Procedimientos mínimamente invasivos para diagnosticar y tratar el dolor en su origen, incluyendo bloqueos nerviosos, inyecciones epidurales y más."
+    },
+    "service2": {
+      "title": "Terapia Física",
+      "desc": "Programas de rehabilitación personalizados para restaurar la función, reducir el dolor y prevenir futuras lesiones."
+    },
+    "service3": {
+      "title": "Cuidado de la Columna",
+      "desc": "Evaluación y tratamiento integral de afecciones de la columna, desde hernias discales hasta enfermedades degenerativas."
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "¿Tienes preguntas o deseas agendar una cita? Completa el formulario y nuestro equipo te contactará lo antes posible."
+  },
+  "footer": {
+    "clinic": "Pain Relief Center",
+    "address": "123 Calle Principal, Ciudad, País",
+    "phone": "Tel: (123) 456-7890",
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "rights": "© 2024 Pain Relief Center. Todos los derechos reservados."
+  }
+}

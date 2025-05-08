@@ -1,0 +1,48 @@
+<nav 
+  class="w-full bg-white shadow-md fixed top-0 left-0 z-50"
+  x-data="{ open: false }"
+  role="navigation"
+  aria-label="Menú principal"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <!-- Logo / Marca -->
+    <a href="#home" class="flex items-center space-x-2">
+      <img src="assets/images/logo.png" alt="Pain Relief Center Logo" class="h-8 w-auto" />
+      <span class="font-bold text-lg text-blue-700" data-i18n="brand">Pain Relief Center</span>
+    </a>
+    <!-- Botón menú móvil -->
+    <button 
+      @click="open = !open"
+      class="sm:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+      aria-label="Abrir menú"
+      :aria-expanded="open"
+    >
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <!-- Menú enlaces -->
+    <div 
+      class="hidden sm:flex space-x-6"
+      :class="{ 'flex flex-col absolute top-16 left-0 w-full bg-white shadow-md sm:static sm:flex-row sm:space-x-6 sm:bg-transparent sm:shadow-none': open }"
+      @click.away="open = false"
+    >
+      <a href="#home" class="nav-link" data-i18n="nav.home">Inicio</a>
+      <a href="#about" class="nav-link" data-i18n="nav.about">Sobre Nosotros</a>
+      <a href="#services" class="nav-link" data-i18n="nav.services">Servicios</a>
+      <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
+      <!-- Selector de idioma -->
+      <select 
+        id="lang-switcher"
+        class="ml-4 border rounded px-2 py-1 text-sm"
+        aria-label="Seleccionar idioma"
+      >
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+  </div>
+</nav>
+<!-- Espaciador para el navbar fijo -->
+<div class="h-16"></div>

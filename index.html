@@ -5,37 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pain Relief Center</title>
   <!-- TailwindCSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Alpine.js para interactividad -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- i18next para multiidioma -->
   <script src="https://unpkg.com/i18next@23.4.6/dist/umd/i18next.min.js"></script>
   <!-- EmailJS para envío de formularios -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <!-- Tus scripts personalizados -->
-  <script defer src="assets/js/i18n.js"></script>
-  <script defer src="assets/js/form.js"></script>
+  <!-- Scripts personalizados (se agregarán después) -->
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/form.js" defer></script>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
-  <!-- HEADER: Aquí se insertará el navbar como componente -->
-  <header id="header" role="banner">
-    <!-- #navbar.html será insertado aquí -->
-    <!-- Ejemplo: <div x-html="navbar"></div> -->
+  <!-- Header con Navbar (componente externo) -->
+  <header>
+    <!-- Aquí se insertará navbar.html -->
+    <!-- #navbar-component -->
   </header>
 
-  <!-- MAIN: Contenido principal del sitio -->
-  <main id="main-content" role="main" class="min-h-screen">
-    <!-- Secciones principales del sitio (home, servicios, contacto, etc.) -->
-    <!-- Cada sección debe tener un id para el scroll suave -->
-    <!-- Ejemplo: <section id="home"></section> -->
-    <!-- Ejemplo: <section id="services"></section> -->
-    <!-- Ejemplo: <section id="contact"></section> -->
+  <!-- Contenido principal -->
+  <main class="min-h-screen">
+    <!-- Sección Hero / Home -->
+    <section id="home" class="flex flex-col items-center justify-center text-center py-20 bg-white">
+      <h1 class="text-4xl font-bold mb-4" data-i18n="hero.title"></h1>
+      <p class="text-lg mb-6" data-i18n="hero.subtitle"></p>
+      <a href="#contact" class="bg-blue-700 text-white px-6 py-3 rounded shadow hover:bg-blue-800 transition" data-i18n="hero.cta"></a>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="max-w-4xl mx-auto py-16 px-4">
+      <h2 class="text-3xl font-semibold mb-4" data-i18n="about.title"></h2>
+      <p class="text-base mb-4" data-i18n="about.text1"></p>
+      <p class="text-base" data-i18n="about.text2"></p>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="services" class="bg-gray-100 py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-semibold mb-8 text-center" data-i18n="services.title"></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded shadow" >
+            <h3 class="text-xl font-bold mb-2" data-i18n="services.service1.title"></h3>
+            <p class="text-sm" data-i18n="services.service1.desc"></p>
+          </div>
+          <div class="bg-white p-6 rounded shadow" >
+            <h3 class="text-xl font-bold mb-2" data-i18n="services.service2.title"></h3>
+            <p class="text-sm" data-i18n="services.service2.desc"></p>
+          </div>
+          <div class="bg-white p-6 rounded shadow" >
+            <h3 class="text-xl font-bold mb-2" data-i18n="services.service3.title"></h3>
+            <p class="text-sm" data-i18n="services.service3.desc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="max-w-2xl mx-auto py-16 px-4">
+      <h2 class="text-3xl font-semibold mb-4" data-i18n="contact.title"></h2>
+      <p class="mb-6" data-i18n="contact.subtitle"></p>
+      <!-- Aquí irá el formulario de contacto -->
+      <div id="contact-form-container"></div>
+    </section>
   </main>
 
-  <!-- FOOTER: Aquí se insertará el footer como componente -->
-  <footer id="footer" role="contentinfo">
-    <!-- #footer.html será insertado aquí -->
-    <!-- Ejemplo: <div x-html="footer"></div> -->
+  <!-- Footer (componente externo) -->
+  <footer>
+    <!-- Aquí se insertará footer.html -->
+    <!-- #footer-component -->
   </footer>
+
+  <script>
+    // Cargar navbar.html dinámicamente
+    fetch('components/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('header').innerHTML = html;
+      });
+
+    // Cargar footer.html dinámicamente
+    fetch('components/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.querySelector('footer').innerHTML = html;
+      });
+  </script>
 </body>
 </html>
