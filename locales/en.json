@@ -33,7 +33,19 @@
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "Have questions or want to schedule an appointment? Fill out the form and our team will contact you as soon as possible."
+    "subtitle": "Have questions or want to schedule an appointment? Fill out the form and our team will contact you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Your name",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "message": "Message",
+      "message_placeholder": "Write your message here...",
+      "send": "Send Message",
+      "success": "Your message has been sent successfully!",
+      "error": "There was an error sending your message. Please try again.",
+      "invalid": "Please fill in all fields correctly."
+    }
   },
   "footer": {
     "clinic": "Pain Relief Center",
