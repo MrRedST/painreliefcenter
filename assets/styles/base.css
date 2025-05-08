@@ -1,0 +1,128 @@
+/* Base styles for Pain Relief Center website */
+
+:root {
+  /* Colores principales */
+  --primary-color: #0056b3;      /* Azul principal */
+  --secondary-color: #00a0e4;    /* Azul secundario */
+  --accent-color: #ff6b00;       /* Naranja acento */
+  --text-color: #333333;         /* Color de texto principal */
+  --light-text: #ffffff;         /* Texto claro */
+  --dark-bg: #1a1a1a;            /* Fondo oscuro */
+  --light-bg: #f5f8fa;           /* Fondo claro */
+  --gray-bg: #f0f0f0;            /* Fondo gris */
+  
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  /* Bordes */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos globales */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Clases de utilidad para colores */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+/* Transiciones */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Botones personalizados */
+.btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+.btn-primary:hover {
+  background-color: color-mix(in srgb, var(--primary-color) 80%, black);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--light-text);
+}
+
+/* Secciones */
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-light {
+  background-color: var(--light-bg);
+}
+
+.section-dark {
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+}
+
+/* Contenedores */
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+} 
