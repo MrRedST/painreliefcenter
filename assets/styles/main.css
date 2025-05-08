@@ -1,0 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Importar nuestros estilos base */
+@import 'base.css';
+
+/* Aquí puedes agregar cualquier estilo adicional que quieras sobrescribir después de Tailwind */ 
