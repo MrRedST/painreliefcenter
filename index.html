@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" x-data>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pain Relief Center</title>
+  <!-- TailwindCSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Alpine.js para interactividad -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- i18next para multiidioma -->
+  <script src="https://unpkg.com/i18next@23.4.6/dist/umd/i18next.min.js"></script>
+  <!-- EmailJS para envío de formularios -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- Tus scripts personalizados -->
+  <script defer src="assets/js/i18n.js"></script>
+  <script defer src="assets/js/form.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+  <!-- HEADER: Aquí se insertará el navbar como componente -->
+  <header id="header" role="banner">
+    <!-- #navbar.html será insertado aquí -->
+    <!-- Ejemplo: <div x-html="navbar"></div> -->
+  </header>
+
+  <!-- MAIN: Contenido principal del sitio -->
+  <main id="main-content" role="main" class="min-h-screen">
+    <!-- Secciones principales del sitio (home, servicios, contacto, etc.) -->
+    <!-- Cada sección debe tener un id para el scroll suave -->
+    <!-- Ejemplo: <section id="home"></section> -->
+    <!-- Ejemplo: <section id="services"></section> -->
+    <!-- Ejemplo: <section id="contact"></section> -->
+  </main>
+
+  <!-- FOOTER: Aquí se insertará el footer como componente -->
+  <footer id="footer" role="contentinfo">
+    <!-- #footer.html será insertado aquí -->
+    <!-- Ejemplo: <div x-html="footer"></div> -->
+  </footer>
+</body>
+</html>
